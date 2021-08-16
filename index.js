@@ -27,7 +27,7 @@
     var sceneListElement = document.querySelector('#sceneList');
     var sceneElements = document.querySelectorAll('#sceneList .scene');
     var sceneListToggleElement = document.querySelector('#sceneListToggle');
-    var autorotateToggleElement = document.querySelector('#autorotateToggle');
+    // var autorotateToggleElement = document.querySelector('#autorotateToggle');
     var fullscreenToggleElement = document.querySelector('#fullscreenToggle');
 
     // Detect desktop or mobile mode.
@@ -125,7 +125,7 @@
     // }
 
     // Set handler for autorotate toggle.
-    autorotateToggleElement.addEventListener('click', toggleAutorotate);
+    // autorotateToggleElement.addEventListener('click', toggleAutorotate);
 
     // Set up fullscreen mode, if supported.
     if (screenfull.enabled && data.settings.fullscreenButton) {
@@ -228,28 +228,28 @@
         sceneListToggleElement.classList.toggle('enabled');
     }
 
-    function startAutorotate() {
-        if (!autorotateToggleElement.classList.contains('enabled')) {
-            return;
-        }
-        viewer.startMovement(autorotate);
-        viewer.setIdleMovement(3000, autorotate);
-    }
+    // function startAutorotate() {
+    //     if (!autorotateToggleElement.classList.contains('enabled')) {
+    //         return;
+    //     }
+    //     viewer.startMovement(autorotate);
+    //     viewer.setIdleMovement(3000, autorotate);
+    // }
 
-    function stopAutorotate() {
-        viewer.stopMovement();
-        viewer.setIdleMovement(Infinity);
-    }
+    // function stopAutorotate() {
+    //     viewer.stopMovement();
+    //     viewer.setIdleMovement(Infinity);
+    // }
 
-    function toggleAutorotate() {
-        if (autorotateToggleElement.classList.contains('enabled')) {
-            autorotateToggleElement.classList.remove('enabled');
-            stopAutorotate();
-        } else {
-            autorotateToggleElement.classList.add('enabled');
-            startAutorotate();
-        }
-    }
+    // function toggleAutorotate() {
+    //     if (autorotateToggleElement.classList.contains('enabled')) {
+    //         autorotateToggleElement.classList.remove('enabled');
+    //         stopAutorotate();
+    //     } else {
+    //         autorotateToggleElement.classList.add('enabled');
+    //         startAutorotate();
+    //     }
+    // }
 
     function createLinkHotspotElement(hotspot) {
 
