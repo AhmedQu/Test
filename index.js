@@ -115,14 +115,14 @@
     });
 
     // Set up autorotate, if enabled.
-    var autorotate = Marzipano.autorotate({
-        yawSpeed: 0.03,
-        targetPitch: 0,
-        targetFov: Math.PI / 2
-    });
-    if (data.settings.autorotateEnabled) {
-        autorotateToggleElement.classList.add('enabled');
-    }
+    // var autorotate = Marzipano.autorotate({
+    //     yawSpeed: 0.03,
+    //     targetPitch: 0,
+    //     targetFov: Math.PI / 2
+    // });
+    // if (data.settings.autorotateEnabled) {
+    //     autorotateToggleElement.classList.add('enabled');
+    // }
 
     // Set handler for autorotate toggle.
     autorotateToggleElement.addEventListener('click', toggleAutorotate);
