@@ -55,7 +55,7 @@ var data = {
                 "yaw": -0.00038049728702915786,
                 "pitch": 0.014985751462495145,
                 "title": "Oriente Station",
-                "img": "img/link.png"
+                "img": img/link.png
             }]
         },
         {
