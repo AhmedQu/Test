@@ -145,24 +145,24 @@
     // }
 
     // Set handler for scene list toggle.
-    sceneListToggleElement.addEventListener('click', toggleSceneList);
+    // sceneListToggleElement.addEventListener('click', toggleSceneList);
 
     // Start with the scene list open on desktop.
-    if (!document.body.classList.contains('mobile')) {
-        showSceneList();
-    }
+    // if (!document.body.classList.contains('mobile')) {
+    //     showSceneList();
+    // }
 
-    // Set handler for scene switch.
-    scenes.forEach(function(scene) {
-        var el = document.querySelector('#sceneList .scene[data-id="' + scene.data.id + '"]');
-        el.addEventListener('click', function() {
-            switchScene(scene);
-            // On mobile, hide scene list after selecting a scene.
-            if (document.body.classList.contains('mobile')) {
-                hideSceneList();
-            }
-        });
-    });
+    // // Set handler for scene switch.
+    // scenes.forEach(function(scene) {
+    //     var el = document.querySelector('#sceneList .scene[data-id="' + scene.data.id + '"]');
+    //     el.addEventListener('click', function() {
+    //         switchScene(scene);
+    //         // On mobile, hide scene list after selecting a scene.
+    //         if (document.body.classList.contains('mobile')) {
+    //             hideSceneList();
+    //         }
+    //     });
+    // });
 
     // DOM elements for view controls.
     var viewUpElement = document.querySelector('#viewUp');
