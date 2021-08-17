@@ -89,23 +89,23 @@
             pinFirstLevel: true
         });
 
-        // // Create link hotspots.
-        // data.linkHotspots.forEach(function(hotspot) {
-        //     var element = createLinkHotspotElement(hotspot);
-        //     scene.hotspotContainer().createHotspot(element, {
-        //         yaw: hotspot.yaw,
-        //         pitch: hotspot.pitch
-        //     });
-        // });
+        // Create link hotspots.
+        data.linkHotspots.forEach(function(hotspot) {
+            var element = createLinkHotspotElement(hotspot);
+            scene.hotspotContainer().createHotspot(element, {
+                yaw: hotspot.yaw,
+                pitch: hotspot.pitch
+            });
+        });
 
-        // // Create info hotspots.
-        // data.infoHotspots.forEach(function(hotspot) {
-        //     var element = createInfoHotspotElement(hotspot);
-        //     scene.hotspotContainer().createHotspot(element, {
-        //         yaw: hotspot.yaw,
-        //         pitch: hotspot.pitch
-        //     });
-        // });
+        // Create info hotspots.
+        data.infoHotspots.forEach(function(hotspot) {
+            var element = createInfoHotspotElement(hotspot);
+            scene.hotspotContainer().createHotspot(element, {
+                yaw: hotspot.yaw,
+                pitch: hotspot.pitch
+            });
+        });
 
         return {
             data: data,
@@ -251,45 +251,45 @@
     //     }
     // }
 
-    // function createLinkHotspotElement(hotspot) {
+    function createLinkHotspotElement(hotspot) {
 
-    //     // Create wrapper element to hold icon and tooltip.
-    //     var wrapper = document.createElement('div');
-    //     wrapper.classList.add('hotspot');
-    //     wrapper.classList.add('link-hotspot');
+        // Create wrapper element to hold icon and tooltip.
+        var wrapper = document.createElement('div');
+        wrapper.classList.add('hotspot');
+        wrapper.classList.add('link-hotspot');
 
-    //     // Create image element.
-    //     var icon = document.createElement('img');
-    //     icon.src = 'img/link.png';
-    //     icon.classList.add('link-hotspot-icon');
+        // Create image element.
+        var icon = document.createElement('img');
+        icon.src = 'img/link.png';
+        icon.classList.add('link-hotspot-icon');
 
-    //     // Set rotation transform.
-    //     var transformProperties = ['-ms-transform', '-webkit-transform', 'transform'];
-    //     for (var i = 0; i < transformProperties.length; i++) {
-    //         var property = transformProperties[i];
-    //         icon.style[property] = 'rotate(' + hotspot.rotation + 'rad)';
-    //     }
+        // Set rotation transform.
+        var transformProperties = ['-ms-transform', '-webkit-transform', 'transform'];
+        for (var i = 0; i < transformProperties.length; i++) {
+            var property = transformProperties[i];
+            icon.style[property] = 'rotate(' + hotspot.rotation + 'rad)';
+        }
 
-    //     // Add click event handler.
-    //     wrapper.addEventListener('click', function() {
-    //         switchScene(findSceneById(hotspot.target));
-    //     });
+        // Add click event handler.
+        wrapper.addEventListener('click', function() {
+            switchScene(findSceneById(hotspot.target));
+        });
 
-    //     // Prevent touch and scroll events from reaching the parent element.
-    //     // This prevents the view control logic from interfering with the hotspot.
-    //     stopTouchAndScrollEventPropagation(wrapper);
+        // Prevent touch and scroll events from reaching the parent element.
+        // This prevents the view control logic from interfering with the hotspot.
+        stopTouchAndScrollEventPropagation(wrapper);
 
-    //     // Create tooltip element.
-    //     var tooltip = document.createElement('div');
-    //     tooltip.classList.add('hotspot-tooltip');
-    //     tooltip.classList.add('link-hotspot-tooltip');
-    //     tooltip.innerHTML = findSceneDataById(hotspot.target).name;
+        // Create tooltip element.
+        var tooltip = document.createElement('div');
+        tooltip.classList.add('hotspot-tooltip');
+        tooltip.classList.add('link-hotspot-tooltip');
+        tooltip.innerHTML = findSceneDataById(hotspot.target).name;
 
-    //     wrapper.appendChild(icon);
-    //     wrapper.appendChild(tooltip);
+        wrapper.appendChild(icon);
+        wrapper.appendChild(tooltip);
 
-    //     return wrapper;
-    // }
+        return wrapper;
+    }
 
     function createInfoHotspotElement(hotspot) {
 
