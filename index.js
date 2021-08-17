@@ -72,9 +72,9 @@
 
     // Create scenes.
     var scenes = data.scenes.map(function(data) {
-        var urlPrefix = "//www.marzipano.net/media";
+        var urlPrefix = "https://pannellum.org/images";
         var source = Marzipano.ImageUrlSource.fromString(
-            urlPrefix + "/" + data.id + "/{z}/{f}/{y}/{x}.jpg", {
+            urlPrefix + "/" + data.id + "alma.jpg", {
                 cubeMapPreviewUrl: urlPrefix + "/" + data.id + "/preview.jpg"
             });
         var geometry = new Marzipano.CubeGeometry(data.levels);
