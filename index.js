@@ -89,23 +89,23 @@
             pinFirstLevel: true
         });
 
-        // Create link hotspots.
-        data.linkHotspots.forEach(function(hotspot) {
-            var element = createLinkHotspotElement(hotspot);
-            scene.hotspotContainer().createHotspot(element, {
-                yaw: hotspot.yaw,
-                pitch: hotspot.pitch
-            });
-        });
+        // // Create link hotspots.
+        // data.linkHotspots.forEach(function(hotspot) {
+        //     var element = createLinkHotspotElement(hotspot);
+        //     scene.hotspotContainer().createHotspot(element, {
+        //         yaw: hotspot.yaw,
+        //         pitch: hotspot.pitch
+        //     });
+        // });
 
-        // Create info hotspots.
-        data.infoHotspots.forEach(function(hotspot) {
-            var element = createInfoHotspotElement(hotspot);
-            scene.hotspotContainer().createHotspot(element, {
-                yaw: hotspot.yaw,
-                pitch: hotspot.pitch
-            });
-        });
+        // // Create info hotspots.
+        // data.infoHotspots.forEach(function(hotspot) {
+        //     var element = createInfoHotspotElement(hotspot);
+        //     scene.hotspotContainer().createHotspot(element, {
+        //         yaw: hotspot.yaw,
+        //         pitch: hotspot.pitch
+        //     });
+        // });
 
         return {
             data: data,
