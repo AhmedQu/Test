@@ -49,13 +49,13 @@ var data = {
                 "yaw": 3.12678386676067,
                 "pitch": -0.0076340532339251865,
                 "rotation": 0,
-                "target": "aa"
+                "target": "electricity-museum"
             }],
             "infoHotspots": [{
                 "yaw": -0.00038049728702915786,
                 "pitch": 0.014985751462495145,
                 "title": "Oriente Station",
-                "img": img/link.png
+                "text": "The Oriente Station is one of the most important bus and train stations in the city. Designed by the Spanish architect and engineer Santiago Calatrava, it has an enormous metal skeleton that covers the eight train lines and its platforms. Finished in 1998 to serve the Expo’98 and, later, the Parque das Nações area, in its surroundings are companies, services, hotels, bars, animation, as well as the well known Vasco da Gama shopping centre."
             }]
         },
         {

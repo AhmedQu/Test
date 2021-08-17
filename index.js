@@ -18,7 +18,7 @@
 (function() {
     var Marzipano = window.Marzipano;
     var bowser = window.bowser;
-    // var screenfull = window.screenfull;
+    var screenfull = window.screenfull;
     var data = window.data;
 
     // Grab elements from DOM.
@@ -128,41 +128,41 @@
     // autorotateToggleElement.addEventListener('click', toggleAutorotate);
 
     // Set up fullscreen mode, if supported.
-    // if (screenfull.enabled && data.settings.fullscreenButton) {
-    //     document.body.classList.add('fullscreen-enabled');
-    //     fullscreenToggleElement.addEventListener('click', function() {
-    //         screenfull.toggle();
-    //     });
-    //     screenfull.on('change', function() {
-    //         if (screenfull.isFullscreen) {
-    //             fullscreenToggleElement.classList.add('enabled');
-    //         } else {
-    //             fullscreenToggleElement.classList.remove('enabled');
-    //         }
-    //     });
-    // } else {
-    //     document.body.classList.add('fullscreen-disabled');
-    // }
+    if (screenfull.enabled && data.settings.fullscreenButton) {
+        document.body.classList.add('fullscreen-enabled');
+        fullscreenToggleElement.addEventListener('click', function() {
+            screenfull.toggle();
+        });
+        screenfull.on('change', function() {
+            if (screenfull.isFullscreen) {
+                fullscreenToggleElement.classList.add('enabled');
+            } else {
+                fullscreenToggleElement.classList.remove('enabled');
+            }
+        });
+    } else {
+        document.body.classList.add('fullscreen-disabled');
+    }
 
     // Set handler for scene list toggle.
-    // sceneListToggleElement.addEventListener('click', toggleSceneList);
+    sceneListToggleElement.addEventListener('click', toggleSceneList);
 
     // Start with the scene list open on desktop.
-    // if (!document.body.classList.contains('mobile')) {
-    //     showSceneList();
-    // }
+    if (!document.body.classList.contains('mobile')) {
+        showSceneList();
+    }
 
     // Set handler for scene switch.
-    // scenes.forEach(function(scene) {
-    //     var el = document.querySelector('#sceneList .scene[data-id="' + scene.data.id + '"]');
-    //     el.addEventListener('click', function() {
-    //         switchScene(scene);
-    //         // On mobile, hide scene list after selecting a scene.
-    //         if (document.body.classList.contains('mobile')) {
-    //             hideSceneList();
-    //         }
-    //     });
-    // });
+    scenes.forEach(function(scene) {
+        var el = document.querySelector('#sceneList .scene[data-id="' + scene.data.id + '"]');
+        el.addEventListener('click', function() {
+            switchScene(scene);
+            // On mobile, hide scene list after selecting a scene.
+            if (document.body.classList.contains('mobile')) {
+                hideSceneList();
+            }
+        });
+    });
 
     // DOM elements for view controls.
     var viewUpElement = document.querySelector('#viewUp');
@@ -213,20 +213,20 @@
         }
     }
 
-    // function showSceneList() {
-    //     sceneListElement.classList.add('enabled');
-    //     sceneListToggleElement.classList.add('enabled');
-    // }
+    function showSceneList() {
+        sceneListElement.classList.add('enabled');
+        sceneListToggleElement.classList.add('enabled');
+    }
 
-    // function hideSceneList() {
-    //     sceneListElement.classList.remove('enabled');
-    //     sceneListToggleElement.classList.remove('enabled');
-    // }
+    function hideSceneList() {
+        sceneListElement.classList.remove('enabled');
+        sceneListToggleElement.classList.remove('enabled');
+    }
 
-    // function toggleSceneList() {
-    //     sceneListElement.classList.toggle('enabled');
-    //     sceneListToggleElement.classList.toggle('enabled');
-    // }
+    function toggleSceneList() {
+        sceneListElement.classList.toggle('enabled');
+        sceneListToggleElement.classList.toggle('enabled');
+    }
 
     // function startAutorotate() {
     //     if (!autorotateToggleElement.classList.contains('enabled')) {
@@ -283,7 +283,7 @@
         var tooltip = document.createElement('div');
         tooltip.classList.add('hotspot-tooltip');
         tooltip.classList.add('link-hotspot-tooltip');
-        // tooltip.innerHTML = findSceneDataById(hotspot.target).name;
+        tooltip.innerHTML = findSceneDataById(hotspot.target).name;
 
         wrapper.appendChild(icon);
         wrapper.appendChild(tooltip);
