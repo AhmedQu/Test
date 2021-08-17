@@ -148,9 +148,9 @@
     // sceneListToggleElement.addEventListener('click', toggleSceneList);
 
     // Start with the scene list open on desktop.
-    if (!document.body.classList.contains('mobile')) {
-        showSceneList();
-    }
+    // if (!document.body.classList.contains('mobile')) {
+    //     showSceneList();
+    // }
 
     // Set handler for scene switch.
     scenes.forEach(function(scene) {
@@ -213,20 +213,20 @@
         }
     }
 
-    function showSceneList() {
-        sceneListElement.classList.add('enabled');
-        sceneListToggleElement.classList.add('enabled');
-    }
+    // function showSceneList() {
+    //     sceneListElement.classList.add('enabled');
+    //     sceneListToggleElement.classList.add('enabled');
+    // }
 
-    function hideSceneList() {
-        sceneListElement.classList.remove('enabled');
-        sceneListToggleElement.classList.remove('enabled');
-    }
+    // function hideSceneList() {
+    //     sceneListElement.classList.remove('enabled');
+    //     sceneListToggleElement.classList.remove('enabled');
+    // }
 
-    function toggleSceneList() {
-        sceneListElement.classList.toggle('enabled');
-        sceneListToggleElement.classList.toggle('enabled');
-    }
+    // function toggleSceneList() {
+    //     sceneListElement.classList.toggle('enabled');
+    //     sceneListToggleElement.classList.toggle('enabled');
+    // }
 
     // function startAutorotate() {
     //     if (!autorotateToggleElement.classList.contains('enabled')) {
